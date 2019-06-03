@@ -1,31 +1,15 @@
 \documentclass[12pt,a4paper]{article}
-\usepackage[utf8]{inputenc}
 \usepackage{better_poster}
-\usepackage{multicol}
-\usepackage{lipsum}
-\usepackage{vwcol}  
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
-\usepackage{graphicx}
-\graphicspath{{./images/}}
-\usepackage{tikz}
-\usepackage[export]{adjustbox}
-\renewcommand{\familydefault}{\sfdefault}
 
-% sets page numbering off
-\pagenumbering{gobble}
 
-\newcommand\postermargin{1cm}
-% set margins
-\usepackage[margin=\postermargin, top=0cm, bottom=0cm]{geometry}
-
+% ---- fill in from here
 % authors
 \title{A Latex Implementation of Mike Morrison's Better Poster}
 \author{Lana Sinapayen, Someone Else}
 
 \begin{document}
 
-% fill with the main point of your study
+% main point of your study
 \makefinding{
 \textbf{Main finding} goes here, translated into \textbf{plain English}. \textbf{Emphasize} the important words.
 }
@@ -67,15 +51,7 @@
     \end{itemize}
     
     \end{multicols}
-}
-\hfill\begin{tikzpicture}[overlay]
-\draw[PineGreen, very thick] (0,0.01\paperheight) -- (0,-0.56\paperheight);
-\end{tikzpicture}
-\hfill
-\parbox[t][0.55\paperheight][t]{0.3\linewidth}{
-    \section*{Extra figures}
-    
-    {\scriptsize
+}\makeextracolumn{
     Add your things here
     
     \includegraphics[width=0.5\linewidth]{icons8-stocks-80.png}\includegraphics[width=0.5\linewidth]{icons8-stocks-80.png}
@@ -85,11 +61,11 @@
         \item Stuff you don't want to forget
         \item But is not essential
     \end{itemize}
-    }
 }
 
 % footer
 % generate qr code from https://www.qr-code-generator.com/ and replace qr_code.png
+% put barcode on the left 
 \makefooter{images/uni_logo.png}{images/qr-code.png}
 
 \end{document}
