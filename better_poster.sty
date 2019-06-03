@@ -25,6 +25,10 @@
 % images path
 \graphicspath{{./images/}}
 
+% poster color
+\colorlet{exp}{PineGreen}
+\colorlet{methods}{Maroon}%or BrickRed
+\colorlet{theory}{MidnightBlue}
 
 % makes title
 \makeatletter
@@ -43,7 +47,7 @@
 \newcommand{\makefinding}[1]{
     \vspace*{-1cm} % get rid of random white space
     \noindent\makebox[\linewidth][c]{%
-      \colorbox{PineGreen}{%
+      \colorbox{\postertype}{%
         \parbox[t][0.3\paperheight][c]{\paperwidth}{%
           \hspace*{\dimexpr\hoffset+\oddsidemargin+1in\relax}%
           \begin{minipage}{\textwidth}
@@ -63,7 +67,7 @@
 \newcommand{\makefooter}[2]{
     \vspace*{\fill}
     \noindent\makebox[\linewidth][c]{%
-      \colorbox{PineGreen}{%
+      \colorbox{\postertype}{%
         \parbox[c][0.14\paperheight][c]{\paperwidth}{%
           \hspace*{\dimexpr\hoffset+\oddsidemargin+1in\relax}%
           \begin{minipage}[c][0.14\paperheight][c]{0.3\textwidth}
@@ -91,7 +95,7 @@
 % makes additional figures column
 \newcommand{\makeextracolumn}[1]{
     \hfill\begin{tikzpicture}[overlay]
-    \draw[PineGreen, very thick] (0,0.01\paperheight) -- (0,-0.56\paperheight);
+    \draw[\postertype, very thick] (0,0.01\paperheight) -- (0,-0.56\paperheight);
     \end{tikzpicture}
     \hfill
     \parbox[t][0.55\paperheight][t]{0.3\linewidth}{

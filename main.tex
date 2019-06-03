@@ -7,12 +7,23 @@
 \title{A Latex Implementation of Mike Morrison's Better Poster}
 \author{Lana Sinapayen, Someone Else}
 
+% type of poster: [exp]erimental results, [methods], [theory]
+% Disclaimer: the original classification had "study" and "intervention" as separate categories. I group them under experimental results.
+\newcommand\postertype{exp} % [exp],[methods],[theory]
+
 \begin{document}
 
 % main point of your study
 \makefinding{
 \textbf{Main finding} goes here, translated into \textbf{plain English}. \textbf{Emphasize} the important words.
 }
+
+
+% \makemain{
+% }{
+
+% }
+
 
 \noindent
 \parbox[t][0.55\paperheight][t]{0.65\linewidth}{%
