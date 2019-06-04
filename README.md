@@ -1,4 +1,5 @@
 # better_poster_latex
+#betterposter
 The Latex version of Mike Morrison's "better poster" template.
 Only portrait version for now.
 
