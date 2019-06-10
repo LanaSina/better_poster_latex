@@ -1,5 +1,8 @@
 # better_poster_latex
 #betterposter
+![Example Image of poster](better_poster.png?raw=true "Better Poster: Portrait")
+
+
 The Latex version of Mike Morrison's "better poster" template.
 Only portrait version for now.
 
