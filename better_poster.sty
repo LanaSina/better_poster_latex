@@ -70,14 +70,38 @@
       \colorbox{\postertype}{%
         \parbox[c][0.14\paperheight][c]{\paperwidth}{%
           \hspace*{\dimexpr\hoffset+\oddsidemargin+1in\relax}%
+          \begin{minipage}[c][0.14\paperheight][c]{0.15\textwidth}
+                \includegraphics[height=0.11\paperheight, left]{#2}
+          \end{minipage}
+          \begin{minipage}[c][0.14\paperheight][c]{0.3\textwidth}
+              \textcolor{white}
+                {\large{
+                   $\leftarrow$ Download the paper }
+                }  
+          \end{minipage}
+          \hfill
+          \begin{minipage}[c][0.14\paperheight][c]{0.2\textwidth}
+            \includegraphics[height=0.11\paperheight, left]{#1}
+          \end{minipage}
+        }%
+      }%
+    }\par\medskip
+}
+
+% alternative footer
+\newcommand{\makealtfooter}[2]{
+    \vspace*{\fill}
+    \noindent\makebox[\linewidth][c]{%
+      \colorbox{\postertype}{%
+        \parbox[c][0.14\paperheight][c]{\paperwidth}{%
+          \hspace*{\dimexpr\hoffset+\oddsidemargin+1in\relax}%
           \begin{minipage}[c][0.14\paperheight][c]{0.3\textwidth}
             % your logo here
-            \includegraphics[height=0.12\paperheight, left]{#1}
+            \includegraphics[height=0.11\paperheight, left]{#1}
             \end{minipage}
           \hfill
           \begin{minipage}[c][0.14\paperheight][c]{0.4\textwidth}
             \begin{flushright}
-                %\includegraphics[]{images/smartphone.png}
                 \textcolor{white}
                 {\large{
                     Download the paper $\rightarrow$}
@@ -85,12 +109,24 @@
                 \end{flushright}
           \end{minipage}
           \begin{minipage}[c][0.14\paperheight][c]{0.2\textwidth}
-                \includegraphics[height=0.12\paperheight, left]{#2}
+                \includegraphics[height=0.11\paperheight, left]{#2}
           \end{minipage}
         }%
       }%
     }\par\medskip
 }
+
+
+% makes main column
+\newcommand{\makemain}[1]{
+    \noindent
+    \parbox[t][0.55\paperheight][t]{0.65\linewidth}{%
+    
+        {\let\newpage\relax\maketitle}
+        #1
+    }
+}
+
 
 % makes additional figures column
 \newcommand{\makeextracolumn}[1]{

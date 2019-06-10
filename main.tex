@@ -3,6 +3,7 @@
 
 
 % ---- fill in from here
+
 % authors
 \title{A Latex Implementation of Mike Morrison's Better Poster}
 \author{Lana Sinapayen, Someone Else}
@@ -25,44 +26,44 @@
 % }
 
 
-\noindent
-\parbox[t][0.55\paperheight][t]{0.65\linewidth}{%
-
-    {\let\newpage\relax\maketitle}
-    
+% the main text of your poster goes here
+\makemain{
+    % you can have 1 or 2 columns
     \raggedcolumns
     \begin{multicols}{2}
-    
-    \section{Intro}
-    \begin{itemize}
-    \setlength\itemsep{0.1em}
-        \item Just give some context
-        \item No need to cite papers
-        \item because people can download your paper
-    \end{itemize}
-    
-    \section{Methods}
-    \begin{itemize}
-    \setlength\itemsep{0.1em}
-        \item N = 30
-        \item Collected this
-        \item Tested with X statistical test
-    \end{itemize}
-    
+        \section{Intro}
+        \begin{itemize}
+        \setlength\itemsep{0.1em}
+            \item Just give some context
+            \item No need to cite papers
+            \item because people can download your paper
+        \end{itemize}
+        
+        \section{Methods}
+        \begin{itemize}
+        \setlength\itemsep{0.1em}
+            \item N = 30
+            \item Collected this
+            \item Tested with X statistical test
+        \end{itemize}
+        
+    % this determines where your columns will be separated
     \columnbreak
-    
-    \section{Results}
-    
-    \includegraphics[width=\linewidth]{icons8-ecg-96.png}
-    \begin{itemize}
-    \setlength\itemsep{0.1em}
-        \item Your
-        \item Talking
-        \item Points
-    \end{itemize}
+
+        \section{Results}
+        
+        \includegraphics[width=\linewidth]{icons8-ecg-96.png}
+        \begin{itemize}
+        \setlength\itemsep{0.1em}
+            \item Your
+            \item Talking
+            \item Points
+        \end{itemize}
     
     \end{multicols}
-}\makeextracolumn{
+}
+% If you have extra figures or data to show
+\makeextracolumn{
     Add your things here
     
     \includegraphics[width=0.5\linewidth]{icons8-stocks-80.png}\includegraphics[width=0.5\linewidth]{icons8-stocks-80.png}
@@ -76,7 +77,10 @@
 
 % footer
 % generate qr code from https://www.qr-code-generator.com/ and replace qr_code.png
-% put barcode on the left 
+% default: barcode on the left
 \makefooter{images/uni_logo.png}{images/qr-code.png}
 
+% replace with this like for barcode on the right
+%\makealtfooter{images/uni_logo.png}{images/qr-code.png}
+ 
 \end{document}
