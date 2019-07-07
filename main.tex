@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper]{article}
+\documentclass[a4paper]{article}
 \usepackage{better_poster}
 
 
@@ -32,20 +32,19 @@
     \raggedcolumns
     \begin{multicols}{2}
         \section{Intro}
-        \begin{itemize}
-        \setlength\itemsep{0.1em}
+        \begin{compactitem}
             \item Just give some context
             \item No need to cite papers
             \item because people can download your paper
-        \end{itemize}
+        \end{compactitem}
         
         \section{Methods}
-        \begin{itemize}
-        \setlength\itemsep{0.1em}
+        \begin{compactitem}
             \item N = 30
+            \item Some math: $w_1 = \epsilon$
             \item Collected this
             \item Tested with X statistical test
-        \end{itemize}
+        \end{compactitem}
         
     % this determines where your columns will be separated
     \columnbreak
@@ -53,12 +52,11 @@
         \section{Results}
         
         \includegraphics[width=\linewidth]{icons8-ecg-96.png}
-        \begin{itemize}
-        \setlength\itemsep{0.1em}
+        \begin{compactitem}
             \item Your
             \item Talking
             \item Points
-        \end{itemize}
+        \end{compactitem}
     
     \end{multicols}
 }

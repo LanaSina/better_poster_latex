@@ -12,7 +12,10 @@
 \usepackage{lmodern}
 \usepackage{multicol}
 \usepackage{vwcol}  
+\usepackage{paralist}
+\usepackage{sfmath}
 \usepackage{tikz}
+
 
 % set margins
 \newcommand\postermargin{1cm}
@@ -39,7 +42,7 @@
             \@title
         \end{flushleft}
     }\vspace{-0.5em}
-    { \@author}
+    {\large \@author}
 }
 \makeatother
 
@@ -123,7 +126,9 @@
     \parbox[t][0.55\paperheight][t]{0.65\linewidth}{%
     
         {\let\newpage\relax\maketitle}
-        #1
+        {\large
+            #1
+        }
     }
 }
 
