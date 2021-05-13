@@ -15,7 +15,12 @@
 \usepackage{paralist}
 \usepackage{sfmath}
 \usepackage{tikz}
+\usepackage{pgfpages}
 
+% set page size
+\newcommand{\postersize}[1]{
+\pgfpagesuselayout{resize to}[#1]
+}
 
 % set margins
 \newcommand\postermargin{1cm}
@@ -147,4 +152,3 @@
         }
     }
 }
-
